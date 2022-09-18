@@ -1,0 +1,27 @@
+/**
+ * Creates an overlay the size of the parent element.
+ * Therefore it blocks any interaction with the element that triggered
+ * the loading spinner.
+ * The parent needs to have a position other than 'static' for the spinner to work
+ */
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.286);
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+/**
+ * Center the loading spinner within the overlay
+ */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
